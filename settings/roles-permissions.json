@@ -20,15 +20,26 @@
         }
       }
     },
-    {
-      "STAFF": {
-        "PERMISSIONS": {
-          "PROFILE": [
-            "CREATE"
-          ]
+    [
+      {
+        "HR": {
+          "PERMISSIONS": {
+            "PROFILE": [
+              "CREATE"
+            ]
+          }
+        }
+      },
+      {
+        "STAFF": {
+          "PERMISSIONS": {
+            "PROFILE": [
+              "CREATE"
+            ]
+          }
         }
       }
-    },
+    ],
     {
       "USER": {
         "PERMISSIONS": {

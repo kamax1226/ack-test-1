@@ -1,0 +1,42 @@
+{
+  "OPERATION": {
+    "UPDATE": "update",
+    "CREATE": "create",
+    "DELETE": "delete"
+  },
+  "SCOPES": {
+    "PROFILE": "profile"
+  },
+  "GROUPS": {
+    
+  },
+  "USERS": [
+    {
+      "ADMIN": {
+        "PERMISSIONS": {
+          "PROFILE": [
+            "CREATE"
+          ]
+        }
+      }
+    },
+    {
+      "STAFF": {
+        "PERMISSIONS": {
+          "PROFILE": [
+            "CREATE"
+          ]
+        }
+      }
+    },
+    {
+      "USER": {
+        "PERMISSIONS": {
+          "PROFILE": [
+            "CREATE"
+          ]
+        }
+      }
+    }
+  ]
+}

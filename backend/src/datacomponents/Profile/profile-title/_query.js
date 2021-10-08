@@ -10,6 +10,7 @@ export const queryTypes = `
   type Query {
     _test31: Int
     test32: EmailAddress @${roles.is.user}
+    test33: String @${permissions.can.read.user_profile}
   }
 `;
 
@@ -19,7 +20,10 @@ export const queryResolvers = {
       return randomIntFromInterval(1, 100);
     },
     test32: () => {
-      return 'info@test.com'
+      return 'info@test.com';
+    },
+    test33: () => {
+      return 'READ USER_PROFILE';
     }
   },
 };

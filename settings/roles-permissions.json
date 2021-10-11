@@ -1,11 +1,12 @@
 {
   "OPERATION": {
+    "READ": "read",
     "UPDATE": "update",
     "CREATE": "create",
     "DELETE": "delete"
   },
   "SCOPES": {
-    "PROFILE": "profile"
+    "USER_PROFILE": "userProfile"
   },
   "GROUPS": {
     
@@ -14,26 +15,39 @@
     {
       "ADMIN": {
         "PERMISSIONS": {
-          "PROFILE": [
-            "CREATE"
+          "USER_PROFILE": [
+            "CREATE",
+            "READ"
           ]
         }
       }
     },
-    {
-      "STAFF": {
-        "PERMISSIONS": {
-          "PROFILE": [
-            "CREATE"
-          ]
+    [
+      {
+        "HR": {
+          "PERMISSIONS": {
+            "USER_PROFILE": [
+              "CREATE"
+            ]
+          }
+        }
+      },
+      {
+        "STAFF": {
+          "PERMISSIONS": {
+            "USER_PROFILE": [
+              "CREATE"
+            ]
+          }
         }
       }
-    },
+    ],
     {
       "USER": {
         "PERMISSIONS": {
-          "PROFILE": [
-            "CREATE"
+          "USER_PROFILE": [
+            "READ",
+            "UPDATE"
           ]
         }
       }

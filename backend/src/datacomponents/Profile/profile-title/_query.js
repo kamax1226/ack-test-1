@@ -11,6 +11,7 @@ export const queryTypes = `
     _test31: Int
     test32: EmailAddress @${roles.is.user}
     test33: String @${permissions.can.read.user_profile}
+    test34: [User] @${roles.is.user}
   }
 `;
 
@@ -24,6 +25,9 @@ export const queryResolvers = {
     },
     test33: () => {
       return 'READ USER_PROFILE';
+    },
+    test34: () => {
+      return 'USER';
     }
   },
 };

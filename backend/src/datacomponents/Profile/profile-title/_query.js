@@ -13,6 +13,7 @@ export const queryTypes = `
     test33: String @${permissions.can.read.user_profile}
     test34: User @${roles.is.user}
     test4 (profile: String): Int
+    test5 (profile: String): Int
   }
 `;
 
@@ -32,6 +33,18 @@ export const queryResolvers = {
     },
     test4: async (_, { profile }) => {
       return profile.length;
+    },
+    test5: (_, { profile }) => {
+      try {
+        if (profile && profile != undefined && profile.length >= 8) {
+          return profile.length;
+        } else {
+          throw new Error("Input is not valid");
+        }
+
+      } catch (e) {
+
+      }
     }
   },
 };
